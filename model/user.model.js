@@ -4,7 +4,8 @@ const userSchema=mongoose.Schema({
     name:String,
     email:String,
     password:String,
-    isAdmin:Boolean
+    role:{type:String,enum:["user","seller","admin"],default:"user"},
+    blocked:{type:Boolean,default:false}
 },{
     versionKey:false
 })

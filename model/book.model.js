@@ -5,7 +5,8 @@ const bookSchema=mongoose.Schema({
     author:String,
     category:String,
     price:Number,
-    quantity:Number
+    quantity:Number,
+    owner:{type:mongoose.Schema.Types.ObjectId,ref:'user'} // seller reference
 },{
     versionKey:false
 })
